@@ -1,0 +1,11 @@
+p {
+  color:red;
+}
+.slike {
+  border: 6px black dotted;
+  padding: 50px;
+}
+
+.slike:hover {
+  border: 10px red solid;
+}
