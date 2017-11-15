@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message list</title>
+</head>
+<body>
+    <h1>Message list</h1>
+
+    <p>{{ messages }}</p>
+
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+
+    {% for message in messages %}
+        <p>{{message.message_text}}</p>
+    {% endfor %}
+
+    {% for message in messages %}
+        <p>{{message.message_text}}, {{message.key.id()}}, {{message.created}}</p>
+    {% endfor %}
+
+    {% for message in messages %}
+        <p><a href="/message/{{message.key.id()}}">  {{message.message_text}}  </a></p>
+    {% endfor %}
+</body>
+</html>
